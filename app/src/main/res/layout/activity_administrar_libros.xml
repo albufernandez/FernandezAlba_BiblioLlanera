@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdministrarLibros">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="281dp"
+                android:layout_height="139dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginBottom="5dp"
+                app:srcCompat="@drawable/libro" />
+
+            <TextView
+                android:id="@+id/tvBienvenida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Para insertar, borrar o modificar un libro inserta los campos: "
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:text="- Nombre del libro:"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:ems="10"
+                android:hint="Juego de tronos"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/tvAutor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:text="- Nombre del autor:"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etAutor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:ems="10"
+                android:hint="George RR Martin"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/tvGenero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="- Género"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spGenero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:entries="@array/categorias" />
+
+            <CheckBox
+                android:id="@+id/cbDisponible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="Disponible" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal">
+
+
+                <RadioButton
+                    android:id="@+id/rbLugo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Lugo de Llanera" />
+
+                <RadioButton
+                    android:id="@+id/rbPosada"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Posada de Llanera" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btBuscar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:backgroundTint="#96A1D9"
+                android:onClick="buscar"
+                android:text="Buscar"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btInsertar"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:backgroundTint="#8AC6AD"
+                    android:onClick="insertarLibro"
+                    android:text="Insertar"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/btBorrarUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:backgroundTint="#FE7B91"
+                    android:onClick="borrar"
+                    android:text="Borrar"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btDevolver"
+                    android:layout_width="184dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:backgroundTint="#89C5AC"
+                    android:onClick="devolver"
+                    android:text="Devolver"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/btBloquear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FD7B90"
+                    android:onClick="bloquear"
+                    android:text="Bloquear"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvLibros"
+                android:layout_width="match_parent"
+                android:layout_height="374dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

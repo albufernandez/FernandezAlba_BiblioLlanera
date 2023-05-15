@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FernandezAlba_BiblioLlanera</string>
+    <string-array name="categorias">
+        <item>Todos</item>
+        <item>Fantasia</item>
+        <item>Policiaco</item>
+        <item>Romantico</item>
+        <item>Terror</item>
+    </string-array>
+</resources>
